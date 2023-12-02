@@ -45,33 +45,39 @@ public class Back1847 {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
 
-        int stack_num = 1;
-        Stack<Integer> stack = new Stack<Integer>();
+        int[]A = new int[N];
 
-        int[]arr = new int[N];
-        for (int i = 0; i < N; i++) {
-            arr[i] = sc.nextInt();
+        for (int i = 0; i < N ; i++) {
+            A[i] = sc.nextInt();
         }
+        Stack<Integer> stack = new Stack<>() ;
 
-        int arr_idx = 0;
+        int num = 1;
 
+        StringBuffer bf = new StringBuffer();
 
-        stack.push(stack_num);
-
-        String answer = "+";
-
-        while(N != arr_idx){
-            if (stack.empty()) { stack_num++; stack.push(stack_num);   answer += "+"; continue; } // empty 처리 잘 해야겠다..
-            if (arr[arr_idx] > stack.peek()) { stack_num++; answer += "+"; stack.push(stack_num); continue; }
-            if (arr[arr_idx] == stack.peek()){ arr_idx++; answer += "-"; stack.pop(); continue; }
-            if (arr[arr_idx] < stack.peek()) { answer = "NO"; System.out.println("NO"); return; }
+        for (int i = 0; i < A.length ; i++) {
+            int su = A[i];
+            if (su >= num){
+                while (su >= num) {
+                    stack.push(num++);
+                    bf.append("+\n");
+                }
+                stack.pop();
+                bf.append("-\n");
+            }
+            else{
+                int n = stack.pop();
+                if ( n > su ){
+                    System.out.println("NO");
+                    return;
+                }
+                else {
+                    bf.append("-\n");
+                }
+            }
         }
-
-        for (String a: answer.split("")
-             ) {
-            System.out.println(a);
-        }
-
+        System.out.println(bf.toString());
 
     }
 
