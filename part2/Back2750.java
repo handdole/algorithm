@@ -35,6 +35,7 @@ public class Back2750 {
             A[i] = sc.nextInt();
         }
 
+        //버블 정렬
         for (int i = A.length -1 ; i > 0 ; i--) {
             change = false;
             for (int j = 0; j < i ; j ++ ){

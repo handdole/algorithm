@@ -40,6 +40,7 @@ public class Back25305 {
 
         br.close();
 
+        // 삽입 정렬
         // 이렇게 쓸려면 scores.length / 2 이전의 값들이 기준에 맞는 정렬 되어있다는 가정이 있어야힘.
         for (int i = 1 ; i < scores.length ; i++) {
             int target = scores[i];

@@ -83,6 +83,9 @@ public class Back1427 {
         출력
 
     */
+
+
+    // 선택 정렬
     public static void solution(){
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
