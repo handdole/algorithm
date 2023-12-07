@@ -1,9 +1,11 @@
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
-public class Back2751 {
+public class Back2751QuickSort {
 
-    /*
-
+     /*
 
     수도코드
     main
@@ -45,8 +47,17 @@ public class Back2751 {
 
     */
 
-    public static void main(String[] args) {
+
+
+    /*
+
+     QuickSort ( 퀵 정렬 )
+
+    */
+
+    public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
+        BufferedWriter buf = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int N = sc.nextInt();
         int [] numbers = new int[N];
@@ -58,11 +69,11 @@ public class Back2751 {
         quickSort(numbers , 0 , numbers.length -1);
 
         for (int ans: numbers
-             ) {
-            System.out.printf(ans+"\n");
+        ) {
+            buf.write( String.valueOf(ans) + "\n");
         }
 
-
+        buf.flush();
 
     }
 
@@ -101,5 +112,4 @@ public class Back2751 {
         numbers[i] = numbers[j];
         numbers[j] = tmep;
     }
-
 }
