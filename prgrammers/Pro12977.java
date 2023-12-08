@@ -17,8 +17,6 @@ public class Pro12977 {
         int [] nums = { 1 ,2 , 3 , 4 , 5 , 6};
 
 
-
-
     }
     /*
 
@@ -57,11 +55,7 @@ public class Pro12977 {
     수도코드
         int answer
         int[] nums
-
         int r
-
-
-
 
     재귀 함수
         param ( int []nums , int start_idx , int set_idx , int answer )
@@ -69,9 +63,6 @@ public class Pro12977 {
         int sum
         for ( i = start_idx ; i < nums.len - start_idx - 2 ; i++ )
             sum = num[start_idx] + num[start_idx+1] + num[start_idx + 2]
-
-
-
 
      */
 
