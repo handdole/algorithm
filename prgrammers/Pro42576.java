@@ -1,5 +1,4 @@
-import java.time.temporal.IsoFields;
-import java.util.*;
+import java.util.Arrays;
 
 public class Pro42576 {
     public static void main(String[] args) {
@@ -7,19 +6,29 @@ public class Pro42576 {
         solution(new String[]{"mislav", "stanko", "mislav", "ana"} , new String[]{"stanko", "ana", "mislav"} );
     }
 
+    /*
+
+    어째든 시간 복잡도를 줄이긴 위해서는
+    for 문을 제일 적게 쓰는게 맞다...
+
+    */
+
     static String solution ( String[] participant , String[] completion ) {
         String answer = "";
 
-        List<String> list = new ArrayList<>(Arrays.asList(participant));
+        Arrays.sort(participant);
+        Arrays.sort(completion);
 
-        for (String s: completion
-             ) {
-            list.remove(s);
+
+        int i;
+        for (i = 0; i < completion.length; i++) {
+            if (!participant[i].equals(completion[i])){
+                break;
+            }
         }
 
-        for( String s : list){
-            answer = s;
-        }
+        answer = participant[i];
+
 
         return answer;
 
