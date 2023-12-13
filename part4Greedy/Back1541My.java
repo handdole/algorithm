@@ -2,7 +2,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import java.util.Scanner;
 
-public class Back1541 {
+public class Back1541My {
 
     public static void main(String[] args) {
         // 마이너스가 나오면 괄호를 열고
