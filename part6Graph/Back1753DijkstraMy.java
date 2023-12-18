@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
-public class Back1753Dijkstra {
+public class Back1753DijkstraMy {
 
     private static int MAX = Integer.MAX_VALUE;
     private static int[] D ;
@@ -82,9 +82,14 @@ public class Back1753Dijkstra {
                      ) {
                     // 연결 되어 있는 노드의 최단 거리 업데이트
                     // 다음에 있는 노드까지의 최단 거리가 현재 노드까지의 최단거리 + 다음 노드에 대한 가중치보다 크면
+                    // 아래 부분 정답 아님
+                    // D[] = node + node
                     if (D[next.getNum()] > D[now.getNum()] + next.getWeight()){
                         // 다음 노드까지의 최단 거리는 현재 노드까지의 최단거리 + 다음 노드에 대한 가중치
+                        // 아래 부분 정답 아님
+                        // D[] = node + node
                         D[next.getNum()] = D[now.getNum()] + next.getWeight();
+                        // que.add ( new Node( next , we ) )
                         que.add(next);
                     }
                 }

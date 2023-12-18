@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Back11657External {
+public class Back11657BellmanFordExternal {
 
     private static class Edge{
         int start;
