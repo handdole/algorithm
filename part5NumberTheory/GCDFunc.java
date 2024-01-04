@@ -1,5 +1,3 @@
-import jdk.jshell.EvalException;
-
 import java.util.Scanner;
 
 public class GCDFunc {
