@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class Pro258712 {
 
     public static void main(String[] args) {
         System.out.println( solution(new String[]{"joy", "brad", "alessandro", "conan", "david"} , new String[]{"alessandro brad", "alessandro joy", "alessandro conan", "david alessandro", "alessandro david"}) );
