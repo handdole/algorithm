@@ -1,5 +1,8 @@
 public class Pro250125 {
     public static void main(String[] args) {
+        String a = "h";
+
+        System.out.println(a.charAt(a.length() - 1));
 
     }
 
