@@ -2,30 +2,30 @@ public class gugudan {
 
     public static void main(String[] args) {
 
-        int I = 1;
-        int J = 1;
+        String a = "123456789";
+        StringBuffer sb = new StringBuffer(a);
 
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                System.out.printf( I * J + " ");
-                J++;
-            }
-            J=1;
-            I++;
-            System.out.println();
+        sb.deleteCharAt(3);
+        sb.insert(3 , " ");
+
+
+        System.out.println(sb.toString());
+
+
+    }
+
+    public static String solution(String s) {
+        String answer = "";
+
+        // 첫 문자가 대문자여야 하기 때문에 나머지 문자는 다 소문자로 치환
+        s = s.toLowerCase();
+
+        for( int i = 0; i < s.length() ; i++ ){
+
+
         }
 
-        /*
-        *
-        *  1*1 1*2 1*3 1*4
-        *  2*1 2*2 2*3 2*4
-        *  3*1 3*2 3*3 3*4
-        *  4*1 4*2 4*3 4*4
-        * */
-
-
-
-
+        return answer;
     }
 
 }
