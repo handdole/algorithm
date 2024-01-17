@@ -1,7 +1,31 @@
 public class SendBox {
 
     public static void main(String[] args) {
-        System.out.println(solution((int)Math.pow(2 , 18)));
+
+        int n = 100000;
+        int answer = 0;
+
+        // 피보나치 수 배열생성
+        int[] fi = new int[100001];
+
+        // init
+        fi[0] = 0;
+        fi[1] = 1;
+
+        // for 문을 통해 피보나치 수 배열에 저장
+        for( int i = 2; i < fi.length ; i++ ){
+            fi[i] = fi[i-1] + fi[i-2];
+        }
+
+        System.out.println("fi[100000] : " + fi[100000]);
+        System.out.println("fi[80400] : " + fi[80400]);
+        System.out.println("fi[90000] : " + fi[90000]);
+        System.out.println("fi[70000] : " + fi[70000]);
+
+        // n번째 피보나치 수 1234567 로 나눈 나머지 구하기
+        answer = (fi[n] % 1234567);
+        System.out.println(answer);
+
     }
 
     public static int solution(int n) {
